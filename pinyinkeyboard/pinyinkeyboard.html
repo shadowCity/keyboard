@@ -1,0 +1,32 @@
+<div id="pinyinkeyboard">
+  <div class="pinyinkeyboardContent" @click.capture="getPointer">
+    <div class="keyLineItem" v-show='typing'>
+      <div class="showtyping">{{hanzi+pychar}}</div>
+      <div class="touchContent" @touchmove="silederOver" @touchend="sliderUp">
+        <div class="page-up" :class="{disabled: updisable}" @click="up">▲</div>
+        <transition-group name="list" tag="div">
+          <div class="result list-item" @click="resclick(item)" :key="item" v-for="item in resultArray1">{{item}}</div>
+        </transition-group>
+        <div class="page-down" :class="{disabled: downdisable}" @click="down">▼</div>
+      </div>
+    </div>
+    <div class="keyLineItem">
+      <div class="keyItem" @click="keyclick(item.value,item.type)" :class="{ backcolor: item.type=='hide'}"
+        v-for="item in keyCodeArray1">{{item.value}}</div>
+    </div>
+    <div class="keyLineItem line2">
+      <div class="keyItem" @click="keyclick(item.value,item.type)" :class="{ del: item.type=='del'}"
+        v-for="item in keyCodeArray2">{{item.value}}</div>
+    </div>
+    <div class="keyLineItem">
+      <div class="keyItem" @click="keyclick(item.value,item.type)"
+        :class="{ backcolor: item.type=='handwrite'||item.type=='enter',sharp:item.value=='#',duan:item.value=='-'}" v-for="item in keyCodeArray3">
+        {{item.value}}</div>
+    </div>
+    <div class="keyLineItem">
+      <div class="keyItem" @click="keyclick(item.value,item.type)"
+        :class="{ space: item.type=='space', done: item.type=='done',backcolor:item.type=='symbl'||item.type=='num', eng: item.type=='eng',comma:item.type=='comma',point:item.type=='point'}"
+        v-for="item in keyCodeArray4">{{item.value}}</div>
+    </div>
+  </div>
+</div>

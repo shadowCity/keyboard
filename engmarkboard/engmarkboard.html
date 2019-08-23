@@ -1,0 +1,38 @@
+<div id="engmarkboard">
+  <div class="keyboard_engmark" @click.capture="getPointer">
+    <div class="mark_left">
+      <div class="lineItem">
+        <div class="leftitem" v-for="item in engArray1" :class="{ comma: item.type==='comma',point: item.type==='point',duan:item.type==='duan',dun:item.type==='dun'}"
+          @click="keyclick(item.value,item.type)">
+          {{item.value}}
+        </div>
+      </div>
+      <div class="lineItem">
+        <div class="leftitem" v-for="item in engArray2" :class="{ semicolon:item.type==='semicolon',lsquote:item.type==='lsigquote',ldquote:item.type==='ldoubquote',rsquote:item.type==='rsigquote',rdquote:item.type==='rdoubquote'}"
+          @click="keyclick(item.value,item.type)">
+          {{item.value}}
+        </div>
+      </div>
+      <div class="lineItem">
+        <div class="leftitem" v-for="item in engArray3" @click="keyclick(item.value,item.type)">
+          {{item.value}}
+        </div>
+      </div>
+      <div class="lineItem">
+        <div class="leftitem" v-for="item in engArray4"  @click="keyclick(item.value,item.type)">
+          {{item.value}}
+        </div>
+      </div>
+    </div>
+    <div class="mark_right">
+      <div class="rightitem" v-for="item in funArray" :class="{ del: item.type==='del', done: item.type==='done'}"
+        @click="keyclick(item.value,item.type)">
+        {{item.value}}
+      </div>
+    </div>
+    <div class="mark_main">
+      <div class="mainitem" :class="{up:upable, disup:!upable}" @click="up"></div>
+      <div class="mainitem" :class="{down:!upable, disdown:upable}" @click="down"></div>
+    </div>
+  </div>
+</div>

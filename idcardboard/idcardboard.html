@@ -1,0 +1,31 @@
+<div id="idcardboard">
+  <div class="keyboard_idcard" @click.capture="getPointer">
+    <div class="lineItem">
+      <div class="item" v-for="item in numArray1" :class="{ hide: item.type==='hide'}" @click="keyclick(item.value,item.type)">
+        {{item.value}}
+      </div>
+    </div>
+    <div class="lineItem">
+      <div class="item" v-for="item in numArray2" :class="{ del: item.type==='del'}" @click="keyclick(item.value,item.type)">
+        {{item.value}}
+      </div>
+    </div>
+    <div class="left">
+      <div class="lineItem">
+        <div class="item" v-for="item in numArray3" @click="keyclick(item.value,item.type)">
+          {{item.value}}
+        </div>
+      </div>
+      <div class="lineItem">
+        <div class="item" v-for="item in numArray4" :class="{ zero2: item.value==='0'}" @click="keyclick(item.value,item.type)">
+          {{item.value}}
+        </div>
+      </div>
+    </div>
+    <div class="lineItemDone">
+      <div class="itemDone" @click="keyclick(done.value,done.type)">
+        {{done.value}}
+      </div>
+    </div>
+  </div>
+</div>

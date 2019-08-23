@@ -1,0 +1,17 @@
+<div id="engkeyboard">
+  <div class="engkeyboardContent" @click.capture="getPointer">
+    <div class="keyLineItem">
+      <div class="keyItem" @click="keyclick(item.value,item.type)" :class="{ backcolor: item.type=='hide'}" v-for="item in keyCodeArrayLower1">{{item.value}}</div>
+    </div>
+    <div class="keyLineItem line2">
+      <div class="keyItem" @click="keyclick(item.value,item.type)" :class="{ del: item.type=='del'}" v-for="item in keyCodeArrayLower2">{{item.value}}</div>
+    </div>
+    <div class="keyLineItem">
+      <div class="keyItem" @click="keyclick(item.value,item.type)" :class="{ backcolor: item.type=='upper'||item.type=='lower'||item.type=='enter',sharp:item.value=='#',duan:item.value=='-'}" v-for="item in keyCodeArrayLower3">{{item.value}}</div>
+    </div>
+    <div class="keyLineItem">
+      <div class="keyItem" @click="keyclick(item.value,item.type)" :class="{space: item.type=='space', done: item.type=='done',backcolor:item.type=='symbl'||item.type=='num',pinyin: item.type=='pinyin'}"
+        v-for="item in keyCodeArrayLower4">{{item.value}}</div>
+    </div>
+  </div>
+</div>

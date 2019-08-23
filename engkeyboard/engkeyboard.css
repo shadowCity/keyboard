@@ -1,0 +1,82 @@
+
+.engkeyboardContent{
+    width: 100%;
+    background: black;
+    /* height: 400px; */
+    padding-top:10px;
+    display: none;
+    z-index: 10;
+}
+.engkeyboardContent.flow{
+    position: absolute;
+    bottom: 0;
+}
+.keyLineItem{
+    width: 100%;
+    height: 100px;
+}
+.keyLineItem.line2{
+    padding-left: 4vw;
+}
+.keyItem{
+    float: left;
+    width: 8vw;
+    height: 90px;
+    background: #444444;
+    color: white;
+    font-size: xx-large;
+    line-height: 90px;
+    margin-left: 1vw;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold
+}
+.keyItem:active {
+  background-color: #686767;
+}
+.keyItem.space{
+  width: 30vw;
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/space.svg");
+  background-size:25% 25%;
+  background-position: center 4vw;
+}
+.keyItem.done{
+  width: 22vw;
+  color: #7ED321;
+  background-color: rgba(255,255,255,0.18)
+}
+.keyItem.backcolor {
+  background-color: rgba(255,255,255,0.18)
+}
+.keyItem.del {
+  background-color: rgba(255,255,255,0.18);
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/del.svg");
+  background-size:50% 50%;
+  background-position: center;
+  width: 13vw;
+}
+.keyItem.del:active {
+  background-color: rgba(255,255,255,0.18);
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/del-pre.svg");
+  background-size:50% 50%;
+  background-position: center
+}
+.keyItem.pinyin {
+  background-color: rgba(255,255,255,0.18);
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/pinyin.svg");
+  background-size:75%;
+  background-position: center
+}
+.keyItem.sharp {
+  font-size: 42px;
+}
+.keyItem.duan {
+  background-repeat: no-repeat;
+  background-image: url("../../lib/css/svg/duan.svg");
+  background-size: 56%;
+  background-position: 80%
+}

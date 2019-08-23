@@ -1,0 +1,176 @@
+.keyboard_mark {
+    width: 100%;
+    background: black;
+    padding-top: 10px;
+    display: none;
+    font-weight: bold;
+    z-index: 10;
+}
+.keyboard_mark::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.keyboard_mark.flow {
+  position: absolute;
+  bottom: 0;
+}
+
+.lineItem {
+  width:100%;
+  height: 100%
+}
+.mark_left {
+  float: left;
+}
+.mark_right {
+  float: right;
+  width: 18.4vw
+}
+.mark_main {
+  margin-left: 74vw;
+}
+.leftitem {
+  float: left;
+  width: 11.1vw;
+  height: 90px;
+  background: #444444;
+  color: white;
+  font-size: xx-large;
+  line-height: 90px;
+  margin-left: 1.2vw;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.leftitem.comma {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/comma.svg");
+  background-size:8%;
+  background-position: center 70%;
+}
+.leftitem.point {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/point.svg");
+  background-size:11%;
+  background-position: center 70%;
+}
+.leftitem.duan {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/duan.svg");
+  background-size:39%;
+  background-position: 65%;
+}
+.leftitem.dun {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/dun.svg");
+  background-size:25% 17%;
+  background-position: center 70%;
+}
+.leftitem.semicolon {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/semicolon.svg");
+  background-size:38% 38%;
+  background-position: center 70%;
+}
+.leftitem.lsquote {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/lsquote.svg");
+  background-size:8%;
+  background-position: center 33%;
+}
+.leftitem.ldquote {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/ldquote.svg");
+  background-size:17%;
+  background-position: center 33%;
+}
+.leftitem.rsquote {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/rsquote.svg");
+  background-size:8%;
+  background-position: center 33%;
+}
+.leftitem.rdquote {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/rdquote.svg");
+  background-size:17%;
+  background-position: center 33%;
+}
+
+.rightitem {
+  float: left;
+  width: 16.4vw;
+  height: 90px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+  font-size: xx-large;
+  line-height: 90px;
+  margin-left: 1vw;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rightitem.del {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/del.svg");
+  background-size:50% 50%;
+  background-position: center
+}
+.rightitem.del:active {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/del-pre.svg");
+  background-size:50% 50%;
+  background-position: center
+}
+.rightitem.done {
+  color:#7ED321
+}
+
+.item.back {
+  background-color: rgba(255,255,255,0.18);
+}
+
+
+.item:active,.itemDone:active {
+  background-color: #686767;
+}
+
+.mainitem {
+  float: left;
+  width: 6.5vw;
+  height: 190px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+  font-size: xx-large;
+  line-height: 90px;
+  margin-left: 1.1vw;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.mainitem.up {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/up.svg");
+  background-size:38% 38%;
+  background-position: center;
+}
+.mainitem.disup {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/up-dis.svg");
+  background-size:38% 38%;
+  background-position: center;
+}
+.mainitem.down {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/down.svg");
+  background-size:38% 38%;
+  background-position: center;
+}
+.mainitem.disdown {
+  background-repeat: no-repeat;
+	background-image:url("../../lib/css/svg/down-dis.svg");
+  background-size:38% 38%;
+  background-position: center;
+}
